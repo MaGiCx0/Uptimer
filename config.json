@@ -1,23 +1,23 @@
 {
     "bot": {
-        "prefix": "!",
-        "id": "BOT ID",
-        "secret": "BOT SECRET",
-        "token": "BOT TOKEN"
+        "prefix": "u!",
+        "id": "1158216887281397822",
+        "secret": "KC1-R3VYcqgkFUu6Rhrw3_A-ENAda4jT"
     },
     "dashboard": {
         "port": 3000,
-        "url": "http://localhost:3000",
-        "callback": "http://localhost:3000/callback",
-        "discord_server_ID": "842461679546531890",
+        "url": "https://uptimer-web.medoo2019.repl.co",
+        "callback": "https://uptimer-web.medoo2019.repl.co/callback",
+        "discord_server_ID": "1157988506212253738",
         "owners": [
-            "OWNERS"
+            "667529789275504640"
         ],
         "arc": {
             "enabled": "false",
             "code": ""
         }
     },
-    "mongodb": "mongodb://localhost:3000/guitarhost",
-    "discord": "https://discord.gg/guitarhost"
+    "mongodb": "mongodb+srv://xvccustoms:jBrKfTwYfBOdb06ig4xj@cluster0.vwdye.mongodb.net/uptimer_site",
+    "discord": "https://discord.gg/vJNX2xFt",
+    "logs": "1158247220735377528"
 }

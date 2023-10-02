@@ -7,7 +7,7 @@ $(document).on('click', '.dropdown-menu', function (e) {
       place.src='https://i.hizliresim.com/rxb5f2.png';
   }
   var i = 0;
-  var txt = "<a href='https://guitahost.tech' style='color: #ff0000'>© GuitarHost 2021</a>";
+  var txt = "<a href='https://discord.gg/azury' style='color: #ff0000'>Copyright © Azury 2022</a>";
   var speed = 50;
   
   $(function() {

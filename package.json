@@ -4,6 +4,7 @@
   "description": "An Website Where You Can Easily Monitor Your Sites For Like Glitch And Repl.it So It Never Goes Asleep",
   "main": "index.js",
   "scripts": {
+    "start": "node index.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -17,11 +18,12 @@
   "author": "Ayaan",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/GuitarHost/Uptimer/issues"
+    "url": "https://github.com/"
   },
-  "homepage": "https://github.com/GuitarHost/Uptimer#readme",
+  "homepage": "https://github.com",
   "dependencies": {
     "body-parser": "^1.19.0",
+    "cfonts": "^2.10.0",
     "chalk": "^4.1.1",
     "discord.js": "^12.5.3",
     "ejs": "^3.1.6",

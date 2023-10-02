@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
 /* Custom Selection */
 ::-moz-selection {
-  color: #7289da;
+  color: #d62228;
   background: #2c2f33;
   transition: all 0.3s;
 }
@@ -11,7 +11,7 @@
     border:0;
 }
 ::selection {
-  color: #7289da;
+  color: #d62228;
   background: #2c2f33;
   transition: all 0.3s;
 }
@@ -209,7 +209,8 @@ select.language:hover {
 }
 body {
     font-family: 'Poppins', sans-serif;
-    background-color: #2c2f33;
+  background: url(https://cdn.discordapp.com/attachments/886270560286408766/949875020144971837/section_1.png);
+    background-color: #151618;
 }
 .bg-vcodes {
     background: #23272a;
@@ -242,7 +243,7 @@ body {
     border-radius: .25rem;
 }
 .copy-link:hover {
-  color: #7289da;
+  color: #ee7752;
   text-decoration: none;
 }
 
@@ -294,14 +295,14 @@ body {
 /* Other styles for the page not related to the animated dropdown */
 .btn-outline-vcodes {
   background-color: transparent;
-  border: 2px solid #7289da;
+  border: 2px solid #ee7752;
   color: #fff;
   font-weight: 500;
   transition: all 0.3s;
 }
 .btn-outline-vcodes:hover {
-  background-color: #7289da;
-  border: 2px solid #7289da;
+  background-color: #ee7752;
+  border: 2px solid #ee7752;
   color: #2c2f33;
 }
 
@@ -316,7 +317,7 @@ body {
     box-shadow: 0px 3px 3px #000;
 }
 .btn-discord-edit {
-    background-color: #7289da;
+    background-color: #ee7752;
     color:#fff;
     padding: 5px 15px;
     transition: all 0.2s;
@@ -398,11 +399,11 @@ body {
   border-radius: 10px;
 }
 ::-webkit-scrollbar-thumb {
-  background: #7289da; 
+  background: #ee7752; 
   border-radius: 10px;
 }
 ::-webkit-scrollbar-thumb:hover {
-  background: #7289da; 
+  background: #ee7752; 
 }
 
 /* CUSTOM FORM */
@@ -490,7 +491,22 @@ body {
   color: white;
   direction: ltr;
 }
+.nav-item {
+  
+  padding: 18px;
+  list-style: none;
+  text-align: center;
+  white-space: nowrap;
+  display: block;
+  transition: background 0.4s;
+ font-size: unset !important;
+}
 
+.nav-item:hover {
+  background: linear-gradient(90deg, rgba(62, 62, 62, 0) 0%, rgba(62, 62, 62, 0.2) 25%, rgba(62, 62, 62, 0.2) 75%, rgba(62, 62, 62, 0) 100%);
+  color: rgba(0, 35, 122, 0.7);
+ font-size: unset !important;
+}
 /* PADDING */
 
 .CodeMirror-lines {
@@ -919,7 +935,7 @@ table.dataTable thead .sorting:after, table.dataTable thead .sorting_asc:after, 
   padding: 9px 14px;;
   color: #fff!important;
   text-align: center;
-  border: 2px solid #7289da;
+  border: 2px solid #ee7752;
   transition: all 0.3s;
 }
 .btn-discord-pagination a {
@@ -929,7 +945,7 @@ table.dataTable thead .sorting:after, table.dataTable thead .sorting_asc:after, 
   color: #fff!important;
 }
 .btn-discord-pagination:hover {
-  background-color: #7289da;
+  background-color: #ee7752;
   cursor: pointer;
   color: #fff;
 }
@@ -1103,7 +1119,7 @@ hr {
     transition: all 0.2s;
 }
 .discord:hover {
-      color: #7289da;
+      color: #ee7752;
       transform: scale(1.5) translateY(-4px);
 }
 .instagram {
@@ -1343,7 +1359,7 @@ footer a:hover {
   position: absolute;
   left: 50%;
   top: 50%;
-  background: #7289da;
+  background: #ee7752;
   border-radius: 1px;
 }
 .selectMultiple > div a i:before {
@@ -1438,7 +1454,7 @@ footer a:hover {
   border-radius: 8px;
 }
 .selectMultiple > ul li:hover {
-  background: #7289da;
+  background: #ee7752;
   color: #fff;
 }
 .selectMultiple > ul li:after {
@@ -1637,13 +1653,13 @@ body .dribbble img {
   }
   .btn-primary {
     color: #fff;
-    background-color: #5e72e4;
+    background-color: #ee7752;
     box-shadow: 0 4px 6px rgba(50, 50, 93, .11), 0 1px 3px rgba(0, 0, 0, .08);
   }
   
   .btn-primary:hover {
     color: #fff;
-    background-color: #5361ac;
+    background-color: #d62228;
   }
   
   .btn-primary:focus {
@@ -1652,12 +1668,12 @@ body .dribbble img {
   
   .btn-primary:disabled {
     color: #fff;
-    background-color: #5e72e4;
+    background-color: #ee7752;
   }
   
   .btn-primary:not(:disabled):not(.disabled):active {
     color: #fff;
-    background-color: #324cdd;
+    background-color: #d62228;
   }
   
   .btn-primary:not(:disabled):not(.disabled):active:focus {
@@ -2279,7 +2295,7 @@ a:hover{
     border-bottom-right-radius: 10px;
 }
 .btn-card {
-    background-color: #7289da;
+    background-color: #ee7752;
     color:#fff;
     padding: 10px 20px;
 }
@@ -2478,7 +2494,7 @@ a:hover{
     -moz-box-align: center;
     align-items: center;
     align-self: center;
-    background-color:#7289da;
+    background-color:#ee7752;
     color: #fff;
     transition: all 0s;
   }
@@ -2498,16 +2514,22 @@ a:hover{
 
 /* NAVBAR */
 .navbar {
-    position: relative;
-    display: -ms-flexbox;
-    display: flex;
-    -ms-flex-wrap: wrap;
-    flex-wrap: wrap;
-    -ms-flex-align: center;
-    align-items: center;
-    -ms-flex-pack: justify;
-    justify-content: space-between;
-    padding: inherit;
+ background-color: rgba(0, 0, 0, 0.7);
+  backdrop-filter: blur(5px);
+ font-size: 15px;
+ height: 65px;
+ box-shadow: 0 3px 15px 0 rgba(0, 0, 0, 0.1), 0 1px 3px 0 rgba(0, 0, 0, 0.08);
+  
+  border-bottom: 1px solid rgba(0, 0, 0, 0.73);
+ position: fixed;
+ top: 0;
+ left: 0;
+ right: 0;
+ z-index: 9999;
+ max-height: 65px;
+ display: flex;
+ align-items: center;
+ align-content: center;
 }
 .vcodes-logo-nav {
     width: 100px;
@@ -2528,7 +2550,7 @@ th {
     height: 650px;
 }
 .btn-card {
-    background-color:#7289da;
+    background-color:#ee7752;
     color: #fff;
     transition: all 0s;
   }
@@ -2559,7 +2581,7 @@ th {
 
 .loader-1 .loader-outter {
     position: absolute;
-    border: 4px solid #7289da;
+    border: 4px solid #ee7752;
     border-left-color: transparent;
     border-bottom: 0;
     width: 100%;
@@ -2571,7 +2593,7 @@ th {
 
 .loader-1 .loader-inner {
     position: absolute;
-    border: 4px solid #7289da;
+    border: 4px solid #ee7752;
     border-radius: 50%;
     width: 40px;
     height: 40px;
@@ -2769,20 +2791,20 @@ color: #fff!important;
   color: #fff!important;
 }
 .nav-userProfile-name:hover, strong:hover {
-  color: #7289da!important;
+  color: #ee7752!important;
 }
 .nav-link {
   color: #fff!important;
 }
 .nav-link:hover {
-  color: #7289da!important;
+  color: #ee7752!important;
 }
 .dropdown-item {
   color: #fff!important;
 }
 .dropdown-item:hover {
   background: #2c2f33;
-  color: #7289da!important;
+  color: #ee7752!important;
 }
 .dropdown-menu i {
     margin-right: 4px;

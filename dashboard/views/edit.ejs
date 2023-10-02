@@ -17,7 +17,7 @@
     <label for="komutlar"><i class="fad fa-link"></i> Monitor Link: <span style="color: rgb(175, 22, 22)">*</span></label>
     <textarea type="text" style="color: white;" class="form-control" id="link" name="link" required><%= dde.link %></textarea>
   </div>
-  <!-- <div class="form-group">
+  <div class="form-group">
     <label><i class="fad fa-robot"></i> Interval<span style="color: rgb(175, 22, 22)"> *</span></label>
     <select name="inter" id="inter" style="background: rgba(35,39,42,255); color: #ffffff; outline: none !important; border-radius: 2px; border: none; width: 100%;" required>
         <% if(dde.time === 3000){ %>
@@ -47,7 +47,7 @@
             <option value="600000">10 Minutes</option>
         <% } %>
      </select>
-  </div> -->
+  </div> 
     <br>
   <button type="submit" form="form-discord" class="btn btn-primary">Submit</button>
 </form>
@@ -61,7 +61,7 @@
      title: 'Succesfull...',
      closeOnConfirm: false,
      text: urlParams.get('message'),
-     footer: 'Copyright 2021 &copy GuitarHost - All right reserved.'
+     footer: 'Copyright 2021 &copy UptimeBasher - All right reserved.'
     }).then((result) => {
   if (result.isConfirmed) {
     window.location.href = '/@me';
@@ -73,7 +73,7 @@
      icon: 'error',
      title: 'Oops...',
      text: urlParams.get('message'),
-     footer: 'Copyright 2021 &copy GuitarHost - All right reserved.'
+     footer: 'Copyright 2021 &copy UptimeBasher - All right reserved.'
     }).then((result) => {
   if (result.isConfirmed) {
     window.location.href = '/uptime/<%= dde.code %>/edit';

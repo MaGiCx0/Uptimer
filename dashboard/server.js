@@ -3,6 +3,7 @@ const app = express();
 const chalk = require("chalk");
 const ejs = require("ejs");
 const path = require("path");
+const Discord = require(`discord.js`)
 const passport = require("passport");
 const session = require("express-session");
 const Strategy = require("passport-discord").Strategy;
@@ -47,7 +48,7 @@ module.exports = async bot => {
 
     app.set('view engine', 'ejs');
     app.set('views', path.join(__dirname, 'views'));
-    app.listen(config.dashboard.port, () => console.log(chalk.green(`Started Server On Port ${config.dashboard.port}`)));
+    app.listen(config.dashboard.port, () => console.log(chalk.green("(/) Initiating:")+chalk.white(" Website-Port ["+config.dashboard.port+"]")));
 
     app.use(
         "/js",
@@ -85,7 +86,9 @@ module.exports = async bot => {
           }
           next();
         },
+
         passport.authenticate("discord", { prompt: "none" })
+
     );
 
     app.get(
@@ -96,10 +99,15 @@ module.exports = async bot => {
         }),
         async (req, res) => {
             res.redirect(req.session.backURL || "/");
+const user = bot.users.cache.get(req.user.id);
+        bot.channels.cache.get(""+config.logs+"").send(new Discord.MessageEmbed().setAuthor(`${user.tag} Logged Into the Site`, user.displayAvatarURL()).setThumbnail("https://cdn.discordapp.com/attachments/937378249716142120/955590723401547776/image_18.png").setColor(`GREEN`).setFooter(`U-ID: ${req.user.id} ☁️ uptimer.azury.live`))
         }
+
     );
 
     app.get("/logout", function(req, res) {
+const user = bot.users.cache.get(req.user.id);
+        bot.channels.cache.get(""+config.logs+"").send(new Discord.MessageEmbed().setAuthor(`${user.tag} Logged Out From The Site`, user.displayAvatarURL()).setThumbnail("https://cdn.discordapp.com/attachments/937378249716142120/955590844520484934/image_19.png").setColor(`GREEN`).setFooter(`U-ID: ${req.user.id} ☁️ uptimer.azury.live`))
         req.session.destroy(() => {
           req.logout();
           res.redirect("/");
@@ -166,6 +174,7 @@ module.exports = async bot => {
           res.redirect(
             "/@me?success=true&message=The link has been successfully deleted from the system."
           );
+
           await uptimedata.deleteOne({ code: req.params.code });
         });
       }
@@ -219,9 +228,12 @@ module.exports = async bot => {
       res.redirect(
         "/uptime/"+dde.code+"/edit?success=true&message=Your monitor has been successfully edited."
       );
+const user = bot.users.cache.get(req.user.id);
+        bot.channels.cache.get(""+config.logs+"").send(new Discord.MessageEmbed().setAuthor(`${user.tag} Edited Their Uptime Link`, user.displayAvatarURL()).setDescription(`> **New Uptime Name:** \`${req.body.name}\`\n\n> **New Uptime Link:** [\`${req.body.link}\`](${req.body.link})`).setColor(`GREEN`).setFooter(`U-ID: ${req.user.id} ☁️ uptimer.azury.live`))
     })
 
     app.post("/uptime", checkAuth, async (req, res) => {
+      
       const rBody = req.body;
       if (!rBody["link"]) {
         res.redirect("?error=true&message=Write a any link.");
@@ -251,6 +263,8 @@ module.exports = async bot => {
         res.redirect(
           "?success=true&message=Your link has been successfully added to the uptime system."
         );
+const user = bot.users.cache.get(req.user.id);
+        bot.channels.cache.get(""+config.logs+"").send(new Discord.MessageEmbed().setAuthor(`${user.tag} Added a New Uptime Link`, user.displayAvatarURL()).setDescription(`> **Uptime Name:** \`${rBody["name"]}\`\n\n> **Uptime Link:** [\`${rBody["link"]}\`](${rBody["link"]})`).setColor(`GREEN`).setFooter(`U-ID: ${req.user.id} ☁️ uptimer.azury.live`))
       }
     })
 
